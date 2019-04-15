@@ -1,3 +1,3 @@
-# LongestCommonSequence
+# LongestCommonSubsequence
 
-https://sametaylak.github.io/LongestCommonSequence/
+https://sametaylak.github.io/LongestCommonSubsequence/
