@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Longest Common Subsequence</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100vh;
+      background-color: #ecf0f1;
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      margin: 0 auto;
+      width: 75%
+    }
+    .page-title {
+      text-align: center;
+      color: #00171f;
+    }
+    input {
+      display: block;
+      width: 50%;
+      height: 50px;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      font-size: 18px;
+      outline: none;
+      padding: 4px 16px;
+      margin: 0 auto;
+      margin-bottom: 1em;
+    }
+    input[type="submit"] {
+      width: 10%;
+      background-color: #3498db;
+      color: #ecf0f1;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <h1 class="page-title">Longest Common Subsequence</h1>
+      <form>
+        <input id="short-string" type="text" placeholder="Short String">
+        <input id="long-string"type="text" placeholder="Long String">
+        <input type="submit" value="Find LCS">
+      </form>
+  </div>
+  <script src="lcs.js"></script>
+  <script>
+    const form = document.querySelector('form');
+    const shortString = document.querySelector('#short-string');
+    const longString = document.querySelector('#long-string');
+    form.onsubmit = (e) => {
+      e.preventDefault();
+
+      const lcsValue = LCS(longString.value, shortString.value);
+      alert(lcsValue);
+    }
+  </script>
+</body>
+</html>
